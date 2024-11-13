@@ -1,19 +1,14 @@
-body{
+*{
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: #ECCEAE;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  box-sizing: border-box;
+
 }
 .container{
-  width: 500px;
-  padding: 20px;
   background-color: #131842;
   border-radius: 10px;
   box-shadow: 0px 5px 10px  black;
+  margin-top: 50px;
 }
 .searchbar{
   display: flex;
@@ -22,25 +17,25 @@ body{
   border: 2px solid skyblue;
   background-color: white;
   border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 .moviename{
   padding: 5px;
   font-size: 17px;
-  border: none;
   outline: none;
+  border: none;
   border-radius: 10px;
+  flex: 1;
 }
 .searchicon{
   padding: 5px;
   cursor: pointer;
-  margin-left: 45%;
   margin-top: 5px;
 }
 .poster{
-  height: 200px;
-  width: 150px;
+  height: 250px;
+  width: 160px;
   display: flex;
   margin-left: 35%;
   background-repeat: no-repeat;
@@ -49,7 +44,7 @@ body{
 .details{
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 .heading{
   color: #E68369;
@@ -60,8 +55,12 @@ span:nth-child(2){
 }
 .footer{
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .plot{
   outline: none;
   color: #FBF6E2;
+}
+.whole{
+  padding: 2px;
 }

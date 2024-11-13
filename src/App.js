@@ -46,13 +46,18 @@ function App() {
   const handleFilm = (e) => {
     setFilm(e.target.value);
   };
+  const handleKeyDown = (e) => {
+    if (e.onKeyDown === "Enter") {
+      search();
+    }
+  };
 
   return (
     <>
     <div className='container'>
-
+      <div className='whole'>
         <div className="searchbar">
-          <input className="moviename" type="text" placeholder='Enter movie name' value={film} onChange={handleFilm} />
+          <input className="moviename" type="text" placeholder='Enter movie name' value={film} onKeyDown={handleKeyDown} onChange={handleFilm} />
           <div className="searchicon" onClick={() => search() }>
             <img src={searchIcon} alt="pic" height="30px" width="30px" />
           </div>
@@ -106,8 +111,8 @@ function App() {
           <div className="heading">Plot : </div>
           <div className="plot">{plot}</div>
         </div>
-
-  </div>
+      </div>
+    </div>
     </>
   );
 }
